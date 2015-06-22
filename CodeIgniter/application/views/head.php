@@ -24,4 +24,5 @@
     <link type="text/css" rel="stylesheet" href="<?php echo base_url('assets'); ?>/styles/zabuto_calendar.min.css">
     <link type="text/css" rel="stylesheet" href="<?php echo base_url('assets'); ?>/styles/pace.css">
     <link type="text/css" rel="stylesheet" href="<?php echo base_url('assets'); ?>/styles/jquery.news-ticker.css">
+    <link type="text/css" rel="stylesheet" href="<?php echo base_url('assets'); ?>/styles/pixolostyle.css">
 </head>

@@ -49,9 +49,10 @@ class Welcome extends Pixolo_Controller {
 	}
     public function tables()
 	{
+        $message['title']='Events';
         $this->load->model('Events_model','',TRUE);
-        $message['events'] = $this->Events_model->getallevents();
-        //print_r(json_encode($this->data));
-		$this->load->view('tables', $this->data);
+        $message['events'] = $this->Events_model->get();
+        //print_r(json_encode($message));
+		$this->load->view('tables', $message);
 	}
 }

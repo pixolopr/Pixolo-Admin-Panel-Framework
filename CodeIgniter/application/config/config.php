@@ -27,7 +27,7 @@ function __autoload($classname){
 | environments.
 |
 */
-$config['base_url'] = 'http://localhost/codeigniter/';
+$config['base_url'] = 'http://localhost/pixolo-admin-panel-framework/codeigniter/';
 
 /*
 |--------------------------------------------------------------------------

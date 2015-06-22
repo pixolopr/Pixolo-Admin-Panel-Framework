@@ -10,11 +10,7 @@ class Events_model extends MY_Model
     public $rules = array();
     protected $_timestamps = 'FALSE';
 	
-    public function getallevents()
-	{
-		$query = $this->db->query("SELECT * FROM `events`")->result();
-        return $query;
-	}
+    
 }
 	
 ?>
