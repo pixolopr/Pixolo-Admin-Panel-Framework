@@ -37,6 +37,7 @@ class MY_Model extends CI_Model {
         $this->db->where($where);
         return $this->get(NULL, $single);
     }
+    
     public function save($data, $id = NULL){
         
         if($this->_timestamps == FALSE)

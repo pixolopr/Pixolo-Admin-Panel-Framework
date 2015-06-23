@@ -38,7 +38,7 @@
                         </ul>
                     </div>
                     <ul class="nav navbar navbar-top-links navbar-right mbn">
-                        
+
                         <li class="dropdown topbar-user">
                             <a data-hover="dropdown" href="#" class="dropdown-toggle"><img src="images/avatar/48.jpg" alt="" class="img-responsive img-circle" />&nbsp;<span class="hidden-xs">Abhay Amin</span>&nbsp;<span class="caret"></span>
                             </a>
@@ -61,7 +61,7 @@
                     </ul>
                 </div>
             </nav>
-            
+
         </div>
         <!--END TOPBAR-->
         <div id="wrapper">
@@ -76,7 +76,7 @@
                         <div class="page-title">
                             <?php echo $title; ?> Table</div>
                     </div>
-                    
+
                     <div class="clearfix">
                     </div>
                 </div>
@@ -86,39 +86,32 @@
                     <div id="tab-general">
                         <div class="row mbl">
 
-<button class="btn btn-primary createbtn" href="welcome/create">Create</button>
+
                             <div class="col-lg-12">
                                 <div class="panel panel-violet">
-                                    <div class="panel-heading"><?php echo $title; ?></div>
+                                    <div class="panel-heading">
+                                        <?php echo $title; ?>
+                                    </div>
                                     <div class="panel-body">
-                                        <table class="table table-hover table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>id</th>
-                                                    <th>logo</th>
-                                                    <th>Name</th>
-                                                    <th>Company Name</th>
-                                                    <th></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <?php foreach($events as $event) { ?>
-                                                <tr>
-                                                    <td>
-                                                        <?php echo $event->id; ?></td>
-                                                    <td>
-                                                        <?php echo $event->logo; ?></td>
-                                                    <td>
-                                                        <?php echo $event->name; ?></td>
-                                                    <td>
-                                                        <?php echo $event->comppanyname; ?></td>
-                                                    <td>
-                                                        <?php echo btn_edit( 'users/edit'); ?>
-                                                    </td>
-                                                </tr>
-                                                <?php }; ?>
-                                            </tbody>
-                                        </table>
+
+                                        <input type="text" name="name" placeholder="name">
+                                        <input type="file" name="logo" placeholder="logo">
+                                        <input type="text" name="comppanyname" placeholder="comppanyname">
+                                        <input type="file" name="companylogo" placeholder="companylogo">
+                                        <input type="date" name="timestamp">
+                                            <textarea name="description" placeholder="description"></textarea>
+                                            showcase in website:
+                                            <select>
+                                                <option name="yes" value="1">Yes</option>
+                                                <option name="no" value="0">No</option>
+                                            </select>
+                                            showcase in upcoming:
+                                            <select>
+                                                <option name="yes" value="1">Yes</option>
+                                                <option name="no" value="0">No</option>
+                                            </select>
+                                            <button class="btn btn-primary createbtn" href="">Create</button>
+
                                     </div>
                                 </div>
                             </div>

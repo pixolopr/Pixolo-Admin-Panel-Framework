@@ -1,3 +1,10 @@
 .cblack {
     color: black;
 }
+
+.createbtn {
+    margin-bottom: 15px;
+    margin-left: 84%;
+    width: 100px;
+    background-color: #9351AD;
+}

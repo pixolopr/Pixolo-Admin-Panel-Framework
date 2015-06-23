@@ -55,4 +55,23 @@ class Welcome extends Pixolo_Controller {
         //print_r(json_encode($message));
 		$this->load->view('tables', $message);
 	}
+    public function createform()
+    {
+        $message['title']='Create';
+        $this->load->model('Events_model','',TRUE);
+        $this->load->view('createform', $message,array('photos'=>''));
+        
+        /*$this->Events_model->save($data);*/
+    }
+    public function createinsert()
+    {
+        
+        if ($this->Events_model->save($data) > 0)
+        {
+            redirect('
+            welcome/tables');
+        }
+     
+    }
+   
 }
