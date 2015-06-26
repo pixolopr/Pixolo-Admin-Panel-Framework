@@ -92,27 +92,29 @@
                                     <div class="panel-heading">
                                         <?php echo $title; ?>
                                     </div>
+                                    <form name="form" method="POST" action="<?php echo site_url('welcome/insertevent'); ?>">
                                     <div class="panel-body">
 
-                                        <input type="text" name="name" placeholder="name">
-                                        <input type="file" name="logo" placeholder="logo">
-                                        <input type="text" name="comppanyname" placeholder="comppanyname">
-                                        <input type="file" name="companylogo" placeholder="companylogo">
-                                        <input type="date" name="timestamp">
-                                            <textarea name="description" placeholder="description"></textarea>
+                                        <input type="text" name="name" placeholder="name" value="<?php echo set_value('name'); ?>">
+                                        <input type="file" name="logo" placeholder="logo" value="<?php echo set_value('logo',''); ?>">
+                                        <input type="text" name="comppanyname" placeholder="comppanyname" value="<?php echo set_value('comppanyname'); ?>">
+                                        <input type="file" name="companylogo" placeholder="companylogo" value="<?php echo set_value('companylogo', ''); ?>">
+                                        <input type="date" name="timestamp" value="<?php echo set_value('timestamp'); ?>">
+                                            <textarea name="description" placeholder="description" value="<?php echo set_value('description'); ?>"></textarea>
                                             showcase in website:
-                                            <select>
+                                            <select name="showcase" value="<?php echo set_value('showcase'); ?>">
                                                 <option name="yes" value="1">Yes</option>
                                                 <option name="no" value="0">No</option>
                                             </select>
                                             showcase in upcoming:
-                                            <select>
+                                            <select name="upcoming" value="<?php echo set_value('upcoming'); ?>">
                                                 <option name="yes" value="1">Yes</option>
                                                 <option name="no" value="0">No</option>
                                             </select>
-                                            <button class="btn btn-primary createbtn" href="">Create</button>
+                                            <button type="submit" class="btn btn-primary createbtn">Create</button>
 
                                     </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>

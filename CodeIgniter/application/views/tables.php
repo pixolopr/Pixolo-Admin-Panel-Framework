@@ -85,8 +85,8 @@
                 <div class="page-content">
                     <div id="tab-general">
                         <div class="row mbl">
-
-<button class="btn btn-primary createbtn" href="welcome/create">Create</button>
+<a href="<?php echo site_url('welcome/createform'); ?>">
+<button class="btn btn-primary createbtn" href="<?php echo site_url('welcome/createform'); ?>">Create</button></a>
                             <div class="col-lg-12">
                                 <div class="panel panel-violet">
                                     <div class="panel-heading"><?php echo $title; ?></div>
@@ -114,6 +114,7 @@
                                                         <?php echo $event->comppanyname; ?></td>
                                                     <td>
                                                         <?php echo btn_edit( 'users/edit'); ?>
+                                                        <?php echo btn_delete( 'users/delete'); ?>
                                                     </td>
                                                 </tr>
                                                 <?php }; ?>

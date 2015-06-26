@@ -59,7 +59,7 @@ class Welcome extends Pixolo_Controller {
     {
         $message['title']='Create';
         $this->load->model('Events_model','',TRUE);
-        $this->load->view('createform', $message,array('photos'=>''));
+        $this->load->view('createform', $message);
         
         /*$this->Events_model->save($data);*/
     }
@@ -73,5 +73,39 @@ class Welcome extends Pixolo_Controller {
         }
      
     }
+    public function insertevent()
+    {
+        $insertdata['name'] = $this->input->post('name');
+        $insertdata['logo'] = $this->input->post('logo');
+        $insertdata['comppanyname'] = $this->input->post('comppanyname');
+        $insertdata['companylogo'] = $this->input->post('companylogo');
+        $insertdata['timestamp'] = $this->input->post('timestamp');
+        $insertdata['description'] = $this->input->post('description');
+        $insertdata['showcase'] = $this->input->post('showcase');
+        $insertdata['upcoming'] = $this->input->post('upcoming');
+        
+
+
+        $this->load->model('Events_model','',TRUE);
+        $this->Events_model->save($insertdata);
+        
+        $message['title']='Events';
+        $message['events'] = $this->Events_model->get();
+        
+        
+        $this->load->view('tables', $message);
+
+
+
+    }
+    
+    public function store()
+    {
+        $name=form1.name.value;
+        $logo=form1.logo.value;
+        console.log($name);
+        console.log($logo);
+    }
+    
    
 }
