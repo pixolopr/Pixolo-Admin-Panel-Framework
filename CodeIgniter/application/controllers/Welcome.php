@@ -83,17 +83,29 @@ class Welcome extends Pixolo_Controller {
         $insertdata['description'] = $this->input->post('description');
         $insertdata['showcase'] = $this->input->post('showcase');
         $insertdata['upcoming'] = $this->input->post('upcoming');
-        $config['upload_path'] = base_url('uploads');
+        $config['upload_path'] ='./uploads/';
+        $config['file_name']=time()."_".$insertdata['logo'];
+        $config['file_name']=time()."_".$insertdata['companylogo'];
         $config['allowed_types'] = 'gif|jpg|png';
 		$config['max_size']	= '100';
 		$config['max_width']  = '1024';
 		$config['max_height']  = '768';
         $this->load->library('upload', $config);
-        if ( ! $this->upload->do_upload())
+       //  $this->upload->do_upload('companylogo');
+        if ( ! $this->upload->do_upload('logo') )
 		{
+           
 			$error = array('error' => $this->upload->display_errors());
 
 			$message['message']= $error;
+            
+		} if ( ! $this->upload->do_upload('companylogo') )
+		{
+           
+			$error = array('error' => $this->upload->display_errors());
+
+			$message['message']= $error;
+            
 		}
 		else
 		{
