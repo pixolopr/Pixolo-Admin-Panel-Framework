@@ -92,7 +92,7 @@
                                     <div class="panel-heading">
                                         <?php echo $title; ?>
                                     </div>
-                                    <form name="form" method="POST" action="<?php echo site_url('welcome/insertevent'); ?>">
+                                    <form name="form" method="POST" action="<?php echo site_url('welcome/insertevent'); ?>" enctype="multipart/form-data">
                                     <div class="panel-body">
 
                                         <input type="text" name="name" placeholder="name" value="<?php echo set_value('name'); ?>">

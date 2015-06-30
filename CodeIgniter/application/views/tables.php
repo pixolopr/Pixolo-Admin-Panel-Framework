@@ -74,7 +74,7 @@
                 <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
                     <div class="page-header pull-left">
                         <div class="page-title">
-                            <?php echo $title; ?> Table</div>
+                            <?php print_r ($message); ?> Table</div>
                     </div>
                     
                     <div class="clearfix">
@@ -113,7 +113,7 @@
                                                     <td>
                                                         <?php echo $event->comppanyname; ?></td>
                                                     <td>
-                                                        <?php echo btn_edit( 'users/edit'); ?>
+                                                        <?php echo btn_edit( 'users/edit/'.$event->id); ?>
                                                         <?php echo btn_delete( 'users/delete'); ?>
                                                     </td>
                                                 </tr>
