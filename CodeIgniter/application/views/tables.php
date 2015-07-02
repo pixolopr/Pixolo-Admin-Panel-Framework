@@ -74,7 +74,7 @@
                 <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
                     <div class="page-header pull-left">
                         <div class="page-title">
-                            <?php print_r ($message); ?> Table</div>
+                            <?php print_r ($title); ?> Table</div>
                     </div>
                     
                     <div class="clearfix">
