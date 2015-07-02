@@ -68,8 +68,7 @@ class Welcome extends Pixolo_Controller {
         
         if ($this->Events_model->save($data) > 0)
         {
-            redirect('
-            welcome/tables');
+            redirect('welcome/tables');
         }
      
     }
@@ -113,15 +112,7 @@ class Welcome extends Pixolo_Controller {
 
 			$message['message']= $data;
 		}
-/*print_r( $this->upload->do_upload());*/
-        $this->load->model('Events_model','',TRUE);
-        $this->Events_model->save($insertdata);
-        
-        $message['title']='Events';
-        $message['events'] = $this->Events_model->get();
-        
-        
-        $this->load->view('tables', $message);
+        redirect('welcome/tables');
 
 
 
